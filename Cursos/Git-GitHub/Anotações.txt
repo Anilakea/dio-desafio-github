@@ -1,0 +1,35 @@
+COMANDOS:
+
+git config --global user.name/email (setar o nome/email)
+
+git config --list (exibir a lista de configs)
+
+git init (cria um novo repositorio)
+
+git status (verifica o estado dos arquivos)
+
+git add *arquivo* (adiciona um arquivo para o stage)
+
+git add ./* (adiciona todos os arquivos para o stage)
+
+git commit *arquivo* -m *mensagem* (comita um arquivo e adiciona uma mensagem)
+
+git rm *arquivo* (remove o arquivo do diretório)
+
+git remote -v (exibe os repositórios remotos)
+
+git remote add origin *url-github* (vincula o repositório local com o repositório remoto)
+
+git remote show origin (exibe informações dos repositórios remotos)
+
+git remote rm *repositório* (Desvincula um repositório remoto)
+
+git push -u origin master (ultilizado no primeiro push com o nome do repositório remoto e o branch)
+
+git push (ultilizado em vezes seguintes)
+
+git pull (atualiza o repositório local com os arquivos mais recentes do repositório remoto)
+
+git fetch (busca alterações mas não as aplica)
+
+git clone *url-diretório* (cria um clone de algum repositório remoto)
