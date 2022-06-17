@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p class="title">flex-direction</p>
+    <!-- Define o eixo principal na qual os itens irão se dispor -->
+    <div class="main-container">
+        <p class="sub-title">row</p>
+        <!-- linha -->
+        <div class="container250">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+        <p class="sub-title">row-reverse</p>
+        <!-- linha com a posição dos itens ao contrário -->
+        <div class="container250 row-reverse">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+        <p class="sub-title">column</p>
+        <!-- coluna -->
+        <div class="container250 column">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+        <p class="sub-title">column-reverse</p>
+        <!-- coluna com a posição dos itens ao contrário  -->
+        <div class="container250 column-reverse">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+        </div>
+    </div>
+
+    <p class="title">flex-wrap</p>
+    <!-- Permite um item quebrar uma linha caso não haja espaço no container -->
+    <div class="main-container">
+        <p class="sub-title">nowrap</p>
+        <!-- não permite o wrap -->
+        <div class="container250 nowrap">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+            <div class="item">item 6</div>
+            <div class="item">item 7</div>
+        </div>
+        <p class="sub-title">wrap</p>
+        <!-- permite o wrap -->
+        <div class="container250 wrap">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+            <div class="item">item 6</div>
+            <div class="item">item 7</div>
+        </div>
+        <p class="sub-title">wrap-reverse</p>
+        <!-- faz o wrap com a posição dos itens ao contrário -->
+        <div class="container250 wrap-reverse">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+            <div class="item">item 6</div>
+            <div class="item">item 7</div>
+        </div>
+    </div>
+
+    <p class="title">flex-flow (shorthand)</p>
+    <!-- Propriedade shorthand para o flex-direction//flex-wrap -->
+    <div class="main-container">
+        <p class="sub-title">row // wrap</p>
+        <div class="container250 column-wrap">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+            <div class="item">item 6</div>
+            <div class="item">item 7</div>
+        </div>
+    </div>
+
+    <p class="title">justify-content</p>
+    <!-- Distribui o espaço restante do container entre os itens -->
+    <div class="main-container">
+        <p class="sub-title">flex-start</p>
+        <!-- Distribui o espaço jogando os itens no começo da linha -->
+        <div class="container350 justify-flex-start">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <p class="sub-title">flex-end</p>
+        <!-- Distribui o espaço jogando os itens para o final da linha -->
+        <div class="container350 justify-flex-end">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <p class="sub-title">center</p>
+        <!-- Distribui o espaço centralizando os itens -->
+        <div class="container350 justify-center">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+    </div>
+    <div class="main-container">
+        <p class="sub-title">space-around</p>
+        <!-- Distribui de forma que o espaço entre os itens seja 2x maior que o espaço entre os itens e a borda do container -->
+        <div class="container350 justify-space-around">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <p class="sub-title">space-evenly</p>
+        <!-- Distribui de forma que o espaço entre os itens (incluindo a borda) seja o mesmo  -->
+        <div class="container350 justify-space-evenly">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <p class="sub-title">space-between</p>
+        <!-- Distribui de forma que o espaço entre os itens seja o mesmo, enquanto entre os itens e a borda seja a padrão -->
+        <div class="container350 justify-between">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+    </div>
+
+    <p class="title">align-items</p>
+    <!-- Alinha os itens com base no eixo trasversal do container -->
+    <div class="main-container">
+        <p class="sub-title">flex-start</p>
+        <!-- Alinha os itens com base no começo do container -->
+        <div class="content-container align-items-flex-start">
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing eli.</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur </div>
+            <div class="item">Lorem ipsum dolor sit amet </div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscin elit. Duis
+                gravida. Nulla facilisi.</div>
+        </div>
+        <p class="sub-title">flex-end</p>
+        <!-- Alinha os itens com base no final do container -->
+        <div class="content-container align-items-flex-end">
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing eli.</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur </div>
+            <div class="item">Lorem ipsum dolor sit amet </div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing eli. Duis
+                gravida. Nulla facilisi.</div>
+        </div>
+        <p class="sub-title">center</p>
+        <!-- Alinha os itens centralizando no container -->
+        <div class="content-container align-items-center">
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing eli.</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur </div>
+            <div class="item">Lorem ipsum dolor sit amet </div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elt. Duis
+                gravida. Nulla facilisi.</div>
+        </div>
+        <p class="sub-title">stretch</p>
+        <!-- Preenche tudo oque for possivel do container na linha trasversal com o espaço vazio do conteudo dos itens -->
+        <div class="content-container align-items-stretch">
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elt.</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur </div>
+            <div class="item">Lorem ipsum dolor sit amet </div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing eit. Duis
+                gravida. Nulla facilisi.</div>
+        </div>
+        <p class="sub-title">baseline</p>
+        <!-- estabelece uma linha de base e alinha todos os itens nele -->
+        <div class="content-container align-items-baseline">
+            <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscingelit.</div>
+            <div class="item">sit amet, consectetur Lorem ipsum dolor </div>
+            <div class="item">Lorem ipsum dolor sit amet </div>
+            <div class="item">consectetur adipiscing elit. Duis Lorem ipsum dolor sit amet gravida. Nulla facilisi.
+            </div>
+        </div>
+    </div>
+
+    <p class="title">align-content</p>
+    <!-- Estica todo o texto do item em uma unica linha -->
+    <div class="main-container">
+        <p class="sub-title">flex-start</p>
+        <!-- preenche no começo do container -->
+        <div class="content-container align-content-flex-start wrap">
+            <div class="item">item 1</div>
+            <div class="item">item 22222</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5555555555</div>
+            <div class="item">item 6</div>
+            <div class="item">item 7</div>
+            <div class="item">item 88888888</div>
+            <div class="item">item 9</div>
+            <div class="item">item 10</div>
+        </div>
+        <p class="sub-title">flex-end</p>
+        <!-- preenche no fina do container -->
+        <div class="content-container align-content-flex-end wrap">
+            <div class="item">item 1</div>
+            <div class="item">item 22222</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5555555555</div>
+            <div class="item">item 6</div>
+            <div class="item">item 7</div>
+            <div class="item">item 88888888</div>
+            <div class="item">item 9</div>
+            <div class="item">item 10</div>
+        </div>
+        <p class="sub-title">center</p>
+        <!-- alinha no centro do container -->
+        <div class="content-container align-content-center wrap">
+            <div class="item">Lorem ipsum dolor sit amet, consectetur Duis </div>
+            <div class="item">Lorem ipsum dolor sit amet, conse aectus via. Nulla faciadipiscing elit.lisi</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Lorem ipsum dtetur Duis</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur Duis</div>
+            <div class="item">Lorem ipsum dolor Duis</div>
+            <div class="item">Lorem ipsum dolor sit amet, c Duis</div>
+        </div>
+    </div>
+    <div class="main-container">
+        <p class="sub-title">stretch</p>
+        <!-- preenche o máximo possível do container com conteudo vazio dos itens -->
+        <div class="content-container align-content-stretch wrap">
+            <div class="item">Lorem ipsum dolor sit amet, consectetur Duis </div>
+            <div class="item">Lorem ipsum dolor sit amet, conse aectus via. Nulla faciadipiscing elit.lisi</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">Lorem ipsum dtetur Duis</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur Duis</div>
+            <div class="item">Lorem ipsum dolor Duis</div>
+            <div class="item">Lorem ipsum dolor sit amet, c Duis</div>
+        </div>
+        <p class="sub-title">space-around</p>
+        <!-- cria um espaço 2x vezes maior na relação item/item em comparação com a relação item/borda-container -->
+        <div class="content-container align-content-space-around wrap">
+            <div class="item">item 1</div>
+            <div class="item">item 22222</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5555555555</div>
+            <div class="item">item 6</div>
+            <div class="item">item 7</div>
+            <div class="item">item 88888888</div>
+            <div class="item">item 9</div>
+            <div class="item">item 10</div>
+        </div>
+        <p class="sub-title">space-between</p>
+        <!-- cria um espaço igual na relação item/item enquanto mantem a relação item/borda igual -->
+        <div class="content-container align-content-space-between wrap">
+            <div class="item">item 1</div>
+            <div class="item">item 22222</div>
+            <div class="item">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5555555555</div>
+            <div class="item">item 6</div>
+            <div class="item">item 7</div>
+            <div class="item">item 88888888</div>
+            <div class="item">item 9</div>
+            <div class="item">item 10</div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <p class="title">order</p>
+    <!-- Define a ordem que os itens irão aparecer no container -->
+    <div class="main-container">
+        <p class="sub-title">order 0</p>
+        <!-- Ordem padrão -->
+        <div class="container250">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <p class="sub-title">order mix</p>
+        <!-- Ordem modificada com o1 sendo prioridade -->
+        <div class="container250">
+            <div class="item order3">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item order1">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item order2">item 5</div>
+        </div>
+    </div>
+
+    <p class="title">flex-grow</p>
+    <!-- faz um item crescer se necessário, com base no espaço vazio de cada item (OBS: os valores do grow não possuem unidades e servem apenas para calculo de proporção) -->
+    <div class="main-container">
+        <p class="sub-title">grow: padrão</p>
+        <!-- não possue alteração -->
+        <div class="container350">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <p class="sub-title">grow: 1(2/4)</p>
+        <div class="container350">
+            <div class="item">item 1</div>
+            <div class="item grow1">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item grow1">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+    </div>
+    <div class="main-container">
+        <p class="sub-title">grow: 1(1/4) 2(5)</p>
+        <div class="container350">
+            <div class="item grow1">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item grow1">item 4</div>
+            <div class="item grow2">item 5</div>
+        </div>
+        <p class="sub-title">grow: 1(2) 2(4/5) 3(1/3)</p>
+        <div class="container350">
+            <div class="item grow3">item 1</div>
+            <div class="item grow1">item 2</div>
+            <div class="item grow3">item 3</div>
+            <div class="item grow2">item 4</div>
+            <div class="item grow2">item 5</div>
+        </div>
+    </div>
+
+    <p class="title">flex-shrink</p>
+    <!-- faz um item encolher se necessário, com base no espaço vazio de cada item (OBS: os valores do shrink não possuem unidades e servem apenas para calculo de proporção) -->
+    <div class="main-container">
+        <p class="sub-title">shrink: padrão</p>
+        <!-- não possue alteração -->
+        <div class="container250">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 4</div>
+            <div class="item">item 5</div>
+        </div>
+        <p class="sub-title">shrink: 1(2/4)</p>
+        <div class="container450">
+            <div class="item">item 1111111</div>
+            <div class="item shrink1">item 22222</div>
+            <div class="item">item 33</div>
+            <div class="item shrink1">item 44444</div>
+            <div class="item">item 5555555555</div>
+        </div>
+    </div>
+    <div class="main-container">
+        <p class="sub-title">shrink: 1(1/4) 2(5)</p>
+        <div class="container250">
+            <div class="item shrink1">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item shrink1">item 4</div>
+            <div class="item shrink2">item 5</div>
+        </div>
+        <p class="sub-title">shrink: 1(2) 2(4/5) 3(1/3)</p>
+        <div class="container450">
+            <div class="item shrink3">item 1111111</div>
+            <div class="item shrink1">item 22222</div>
+            <div class="item shrink3">item 33</div>
+            <div class="item shrink2">item 44444</div>
+            <div class="item shrink2">item 5555555555</div>
+        </div>
+    </div>
+
+    <p class="title">flex</p>
+    <!-- propriedade shorthand para flex-grow // flex-shrink // flex-basis -->
+    <div class="main-container">
+        <p class="sub-title">flex: auto</p>
+        <div class="container450">
+            <div class="item flex-auto">Lorem ipsum dolor sit amet, consectetur Duis</div>
+            <div class="item flex-auto">Lorem ipsum dolor Duis</div>
+            <div class="item flex-auto">Lorem ipsum dolor sit amet, c Duis</div>
+        </div>
+        <p class="sub-title">flex: 0</p>
+        <div class="container450">
+            <div class="item flex0">Lorem ipsum dolor sit amet, consectetur Duis</div>
+            <div class="item flex0">Lorem ipsum dolor Duis</div>
+            <div class="item flex0">Lorem ipsum dolor sit amet, c Duis</div>
+        </div>
+        <p class="sub-title">flex: 1</p>
+        <div class="container450">
+            <div class="item flex1">Lorem ipsum dolor sit amet, consectetur Duis</div>
+            <div class="item flex1">Lorem ipsum dolor Duis</div>
+            <div class="item flex1">Lorem ipsum dolor sit amet, c Duis</div>
+        </div>
+    </div>
+</body>
+</html>
